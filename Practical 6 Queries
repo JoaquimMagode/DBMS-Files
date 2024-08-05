@@ -93,3 +93,24 @@ INSERT INTO Customers (Cname, City) VALUES
 ('KRANTI', 'BOMBAY'),
 ('NAREN', 'BOMBAY');
 
+CREATE TABLE Product (
+    Pr_no VARCHAR(10) PRIMARY KEY,       -- Assumes product numbers are alphanumeric and up to 10 characters long
+    Dscr VARCHAR(50),                    -- Assumes description can be up to 50 characters
+    Profit INT,                          -- Assumes profit is an integer
+    Unit VARCHAR(10),                    -- Assumes unit type is up to 10 characters long
+    Qty INT,                             -- Assumes quantity is an integer
+    Reorder_Lvl INT,                     -- Assumes reorder level is an integer
+    Sell_Price DECIMAL(10, 2),           -- Assumes sell price is a decimal with up to 10 digits and 2 decimal places
+    Cost_Price DECIMAL(10, 2)            -- Assumes cost price is a decimal with up to 10 digits and 2 decimal places
+);
+INSERT INTO Product (Pr_no, Dscr, Profit, Unit, Qty, Reorder_Lvl, Sell_Price, Cost_Price) VALUES
+('P00001', 'T-Shirts', 5, 'Piece', 200, 50, 350, 250),
+('P0345', 'Shirts', 6, 'Piece', 150, 50, 500, 350),
+('P06734', 'Cotton Jeans', 5, 'Piece', 100, 20, 600, 450),
+('P07865', 'Jeans', 5, 'Piece', 100, 20, 750, 500),
+('P07868', 'Trousers', 2, 'Piece', 150, 50, 850, 550),
+('P07885', 'Pull Overs', 3, 'Piece', 80, 30, 700, 450),
+('P07965', 'Denim Shirts', 4, 'Piece', 100, 40, 350, 250),
+('P07975', 'Lycra Tops', 5, 'Piece', 70, 30, 300, 175),
+('P08865', 'Skirts', 5, 'Piece', 75, 30, 450, 300);
+
