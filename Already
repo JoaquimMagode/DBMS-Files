@@ -1,0 +1,79 @@
+Practica-6
+
+1.	List total deposit
+2.	Give maximum loan given to the customer
+3.	Describe the average age of customers
+4.	Count total number of customers
+5.	Count total number of customers cities
+6.	Display total target for the salesman
+7.	Update the city of client from Bangalore to Bengaluru
+8.	 Give the 15% hike in the salary of all Employee. Rename that column to “New Salary”
+9.	Increases the Sell price of all products by 20% and label new column as “New Sell Price”. (Do not update the table)
+10.	Provide the count of customer staying in “Bombay”
+
+
+Sailors Table:
+ 
+
+Salesman Table: 
+
+
+Customers Table: 
+
+
+Deposit Table: 
+
+Employee Table: 
+
+1. List total deposit from deposit.
+SELECT SUM(Amount) AS TotalDeposit
+FROM Deposit;
+ 
+
+
+
+2. Give maximum loan given to the customer
+SELECT MAX(Amount) AS MaxLoan FROM Loan;
+
+
+3. Describe the average age of customers
+SELECT AVG(Age) AS AverageAge
+FROM Sailors;
+ 
+
+
+4. Count total number of customers
+SELECT COUNT(*) AS TotalCustomers
+FROM Customers;
+ 
+
+5. Count total number of customers' cities
+SELECT COUNT(DISTINCT City) AS TotalCustomerCities
+FROM Customers;
+ 
+
+6. Display total target for the salesman
+SELECT SUM(Tgt) AS TotalTarget FROM Salesman;
+ 
+
+7. Update the city of client from Bangalore to Bengaluru
+UPDATE Customers SET City = 'Bengaluru' WHERE City = 'Bangalore';
+ 
+
+8. Give the 15% hike in the salary of all Employees and rename that column to “New Salary”
+SELECT Emp_name, Street, City, Salary, Salary * 1.15 AS NewSalary
+FROM Employee;
+ 
+
+9. Increases the Sell price of all products by 20% and label the new column as “New Sell Price” (Do not update the table)
+SELECT ProductID, ProductName, SellPrice, SellPrice * 1.20 AS NewSellPrice
+FROM Products;
+ 
+
+10. Provide the count of customers staying in “Bombay”
+SELECT COUNT(*) AS CustomersInBombay FROM Customers
+WHERE City = 'Bombay';
+ 
+
+
+
