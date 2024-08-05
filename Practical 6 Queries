@@ -1,0 +1,78 @@
+CREATE TABLE Employee (
+    Emp_name VARCHAR(50),
+    Street VARCHAR(50),
+    City VARCHAR(50),
+    PRIMARY KEY (Emp_name)
+);
+INSERT INTO Employee (Emp_name, Street, City) VALUES ('Adam', 'Spring', 'Pittsfield');
+INSERT INTO Employee (Emp_name, Street, City) VALUES ('Brooks', 'Senator', 'Brooklyn');
+INSERT INTO Employee (Emp_name, Street, City) VALUES ('Curry', 'North', 'Rye');
+INSERT INTO Employee (Emp_name, Street, City) VALUES ('Demalo', 'SunShine', 'San Deago');
+
+
+CREATE TABLE Company (
+    Cmp_name VARCHAR(50),
+    City VARCHAR(50),
+    PRIMARY KEY (Cmp_name)
+);
+
+INSERT INTO Company (Cmp_name, City) VALUES ('FBC', 'Pittsfield');
+INSERT INTO Company (Cmp_name, City) VALUES ('MBC', 'Brooklyn');
+INSERT INTO Company (Cmp_name, City) VALUES ('SBC', 'Rye');
+
+CREATE TABLE Sailors (
+    Sid INT PRIMARY KEY,
+    Sname VARCHAR(50),
+    Rating INT,
+    Age DECIMAL(4, 1)
+);
+INSERT INTO Sailors (Sid, Sname, Rating, Age) VALUES (22, 'Dustin', 7, 45.0);
+INSERT INTO Sailors (Sid, Sname, Rating, Age) VALUES (29, 'Brutus', 1, 33.0);
+INSERT INTO Sailors (Sid, Sname, Rating, Age) VALUES (31, 'Lubber', 8, 55.5);
+INSERT INTO Sailors (Sid, Sname, Rating, Age) VALUES (32, 'Andy', 8, 25.5);
+INSERT INTO Sailors (Sid, Sname, Rating, Age) VALUES (58, 'Rusty', 10, 35.0);
+INSERT INTO Sailors (Sid, Sname, Rating, Age) VALUES (64, 'Horatio', 7, 35.0);
+INSERT INTO Sailors (Sid, Sname, Rating, Age) VALUES (71, 'Zobra', 10, 16.0);
+INSERT INTO Sailors (Sid, Sname, Rating, Age) VALUES (74, 'Horatio', 9, 35.0);
+INSERT INTO Sailors (Sid, Sname, Rating, Age) VALUES (85, 'Art', 3, 25.5);
+INSERT INTO Sailors (Sid, Sname, Rating, Age) VALUES (95, 'Bob', 3, 63.0);
+
+
+CREATE TABLE Salesman (
+    Sl_no VARCHAR(10) PRIMARY KEY,
+    Name VARCHAR(50),
+    Add1 VARCHAR(100),
+    Add2 VARCHAR(100),
+    City VARCHAR(50),
+    Pin VARCHAR(10),
+    State VARCHAR(50),
+    Amt DECIMAL(10, 2),
+    Tgt INT,
+    Sales INT,
+    Rem VARCHAR(10)
+);
+
+INSERT INTO Salesman (Sl_no, Name, Add1, Add2, City, Pin, State, Amt, Tgt, Sales, Rem) VALUES
+('S00001', 'Aman', 'A/14', 'Worli', 'Mumbai', '400002', 'Maharashtra', 3000.00, 100, 50, 'Good'),
+('S00002', 'Omkar', '65', 'Nariman', 'Mumbai', '400001', 'Maharashtra', 3000.00, 200, 100, 'Good'),
+('S00003', 'Raj', 'P-7', 'Bandra', 'Mumbai', '400032', 'Maharashtra', 3000.00, 200, 100, 'Good'),
+('S00004', 'Ashish', 'A/5', 'Juhu', 'Mumbai', '400044', 'Maharashtra', 3500.00, 200, 150, 'Good');
+
+CREATE TABLE Deposit (
+    Act_no INT PRIMARY KEY,
+    Cname VARCHAR(50),
+    Bname VARCHAR(50),
+    Amount DECIMAL(10, 2),
+    Date DATE
+);
+
+INSERT INTO Deposit (Act_no, Cname, Bname, Amount, Date) VALUES
+(100, 'ANIL', 'VRCE', 1000.00, TO_DATE('01-MAR-95', 'DD-MON-YY')),
+(101, 'SUNIL', 'AJNI', 5000.00, TO_DATE('04-JAN-96', 'DD-MON-YY')),
+(102, 'MEHUL', 'KAROLBAGH', 3500.00, TO_DATE('17-NOV-95', 'DD-MON-YY')),
+(104, 'MADHURI', 'CHANDI', 1200.00, TO_DATE('17-DEC-95', 'DD-MON-YY')),
+(105, 'PRMOD', 'M.G.ROAD', 3000.00, TO_DATE('27-MAR-96', 'DD-MON-YY')),
+(106, 'SANDIP', 'ANDHERI', 2000.00, TO_DATE('31-MAR-96', 'DD-MON-YY')),
+(107, 'SHIVANI', 'VIRAR', 1000.00, TO_DATE('05-SEP-95', 'DD-MON-YY')),
+(108, 'KRANTI', 'NEHRU PLACE', 5000.00, TO_DATE('02-JUL-95', 'DD-MON-YY')),
+(109, 'MINU', 'POWAI', 7000.00, TO_DATE('10-AUG-95', 'DD-MON-YY'));
