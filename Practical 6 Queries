@@ -76,3 +76,20 @@ INSERT INTO Deposit (Act_no, Cname, Bname, Amount, Date) VALUES
 (107, 'SHIVANI', 'VIRAR', 1000.00, TO_DATE('05-SEP-95', 'DD-MON-YY')),
 (108, 'KRANTI', 'NEHRU PLACE', 5000.00, TO_DATE('02-JUL-95', 'DD-MON-YY')),
 (109, 'MINU', 'POWAI', 7000.00, TO_DATE('10-AUG-95', 'DD-MON-YY'));
+
+CREATE TABLE Customers (
+    Cname VARCHAR(50) PRIMARY KEY,
+    City VARCHAR(50)
+);
+INSERT INTO Customers (Cname, City) VALUES
+('ANIL', 'CALCUTTA'),
+('SUNIL', 'DELHI'),
+('MEHUL', 'BARODA'),
+('MANDAR', 'PATNA'),
+('MADHURI', 'NAGPUR'),
+('PRAMOD', 'NAGPUR'),
+('SANDIP', 'SURAT'),
+('SHIVANI', 'BOMBAY'),
+('KRANTI', 'BOMBAY'),
+('NAREN', 'BOMBAY');
+
