@@ -1,9 +1,11 @@
+//Create Table Employee and Insert values
 CREATE TABLE Employee (
     Emp_name VARCHAR(50),
     Street VARCHAR(50),
     City VARCHAR(50),
     PRIMARY KEY (Emp_name)
 );
+
 INSERT INTO Employee (Emp_name, Street, City) VALUES ('Adam', 'Spring', 'Pittsfield');
 INSERT INTO Employee (Emp_name, Street, City) VALUES ('Brooks', 'Senator', 'Brooklyn');
 INSERT INTO Employee (Emp_name, Street, City) VALUES ('Curry', 'North', 'Rye');
