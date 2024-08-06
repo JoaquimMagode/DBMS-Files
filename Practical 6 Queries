@@ -12,6 +12,8 @@ INSERT INTO Employee (Emp_name, Street, City) VALUES ('Curry', 'North', 'Rye');
 INSERT INTO Employee (Emp_name, Street, City) VALUES ('Demalo', 'SunShine', 'San Deago');
 
 
+
+//Create Table Company and Insert values
 CREATE TABLE Company (
     Cmp_name VARCHAR(50),
     City VARCHAR(50),
